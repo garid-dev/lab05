@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лаб 5 | Миний танилцуулга</title>
+  <link rel="stylesheet" href="lab5.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Миний хуудас</a>
+
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Навигацийн цэс нээх">
+      <label class="menu-button" for="menu-toggle" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="main-nav" aria-label="Үндсэн цэс">
+        <a href="#about">Миний тухай</a>
+        <a href="#projects">Төслүүд</a>
+        <a href="#skills">Ур чадвар</a>
+        <a href="#contact">Холбоо барих</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="intro">
+      <div class="container intro-content">
+        <img class="profile-photo" src="image.jpg" alt="Миний зураг">
+        <p class="small-title">Сайн байна уу?</p>
+        <h1>Намайг веб хөгжүүлэгч гэдэг.</h1>
+        <p class="intro-text">Би HTML, CSS сурч байгаа оюутан. Лаб 2–4 болон 6 дээр хийсэн ажлуудаа нэг дороос үзээрэй.</p>
+        <a class="button" href="#projects">Миний төслүүд</a>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-content">
+        <h2>Миний тухай</h2>
+        <p>Веб хуудас хийж сурах сонирхолтой. Шинэ зүйл сурч, өөрийн жижиг төслүүдээ бүтээж байна.</p>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="projects">
+      <div class="container">
+        <h2>Миний төслүүд</h2>
+        <div class="project-list">
+          <article class="project-card">
+            <span class="project-number">02</span>
+            <div class="project-copy">
+              <p class="project-label">Лаборатори 2 · HTML Form</p>
+              <h3>Хувийн мэдээллийн анкет</h3>
+              <p>Хувийн мэдээлэл, хүйс, сонирхол болон хот сонгох формын элементүүдийг ашиглав.</p>
+              <a class="project-link" href="lab2taniltsuulga.html">Лаб 2-ыг нээх <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <span class="project-number">03</span>
+            <div class="project-copy">
+              <p class="project-label">Лаборатори 3 · Form UI</p>
+              <h3>Бүртгэлийн дэлгэрэнгүй форм</h3>
+              <p>Профайл зураг, холбоо барих мэдээлэл, боловсрол болон нэмэлт талбаруудтай.</p>
+              <a class="project-link" href="lab3.html">Лаб 3-ыг нээх <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <span class="project-number">04</span>
+            <div class="project-copy">
+              <p class="project-label">Лаборатори 4 · CSS Layout</p>
+              <h3>Олон хэсэгтэй анкетын хуудас</h3>
+              <p>Навигаци, hero хэсэг, ангилсан формын карт болон профайл самбарыг нэгтгэв.</p>
+              <a class="project-link" href="lab4.html">Лаб 4-ыг нээх <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          <article class="project-card">
+            <span class="project-number">06</span>
+            <div class="project-copy">
+              <p class="project-label">Лаборатори 6 · Interactive Gallery</p>
+              <h3>Дэлхийн уран зургийн цомог</h3>
+              <p>Уран зургийн карт, гэрэл/харанхуй горим, видео болон газрын зурагтай интерактив галерей.</p>
+              <a class="project-link" href="lab6-gallery.html">Лаб 6-ыг нээх <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <h2>Миний сурч байгаа зүйлс</h2>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Flexbox</li>
+          <li>Media Queries</li>
+          <li>JavaScript</li>
+          <li>Интерактив галерей</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>Холбоо барих</h2>
+        <p><a href="mailto:example@mail.mn">example@mail.mn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Лаб 5 — Responsive веб хуудас</p>
+      <a href="lab5-wireframe.html">Wireframe харах</a>
+    </div>
+  </footer>
+</body>
+</html>
