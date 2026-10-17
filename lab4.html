@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab4 - Бүртгэлийн анкет</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#">Анкет<span>Бүртгэл</span></a>
+    <nav class="nav" aria-label="Үндсэн цэс">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#">Нүүр</a></li>
+        <li><a class="nav-link active" href="#">Анкет</a></li>
+        <li><a class="nav-link" href="#">Тусламж</a></li>
+        <li><a class="nav-link" href="#">Холбоо барих</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#">Нэвтрэх</a>
+  </header>
+
+  <section class="hero">
+    <h1>Бүртгэлийн анкет</h1>
+    <p>Доорх мэдээллийг үнэн зөв бөглөнө үү.</p>
+  </section>
+
+  <div class="layout">
+    <main class="content">
+      <form class="form" action="#" method="post">
+        <div class="cards">
+
+          <fieldset class="card">
+            <legend class="card-title">Хувийн мэдээлэл</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="surname">Овог:</label>
+                <input class="input" id="surname" name="surname" placeholder="Овогоо оруулна уу" required minlength="2">
+              </div>
+              <div class="field">
+                <label for="name">Нэр:</label>
+                <input class="input" id="name" name="name" placeholder="Нэрээ оруулна уу" required minlength="2">
+              </div>
+              <div class="field">
+                <label for="email">Имэйл:</label>
+                <input class="input" type="email" id="email" name="email" placeholder="example@gmail.com" required>
+              </div>
+              <div class="field">
+                <label for="password">Нууц үг:</label>
+                <input class="input" type="password" id="password" name="password" placeholder="Дор хаяж 8 тэмдэгт"
+                required pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Дор хаяж 8 тэмдэгт, үсэг болон тоо агуулсан байх ёстой">
+              </div>
+              <div class="field">
+                <label for="birthdate">Төрсөн огноо:</label>
+                <input class="input" type="date" id="birthdate" name="birthdate" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="card-title">Холбоо барих мэдээлэл</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="phone">Утасны дугаар:</label>
+                <input class="input" type="tel" id="phone" name="phone" placeholder="9911 2233" pattern="[0-9\s+()-]{8,}" required>
+              </div>
+              <div class="field">
+                <label for="social">Сошиал хаяг:</label>
+                <input class="input" type="url" id="social" name="social" placeholder="https://example.com">
+              </div>
+              <div class="field">
+                <label for="emergency-name">Яаралтай үеийн хүн:</label>
+                <input class="input" id="emergency-name" name="emergency-name" placeholder="Нэр">
+              </div>
+              <div class="field">
+                <label for="emergency-phone">Түүний утас:</label>
+                <input class="input" type="tel" id="emergency-phone" name="emergency-phone" placeholder="9911 2233" pattern="[0-9\s+()-]{8,}">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="card-title">Сургууль, ажил</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="education">Боловсрол:</label>
+                <select class="input" id="education" name="education" required>
+                <option value="">-- Сонгоно уу --</option>
+                <option>Бүрэн дунд</option>
+                <option>Оюутан</option>
+                <option>Бакалавр</option>
+                <option>Магистр</option>
+                <option>Бусад</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="occupation">Мэргэжил:</label>
+                <input class="input" id="occupation" name="occupation" placeholder="Жишээ: Программист" required minlength="2">
+              </div>
+              <div class="field">
+                <label for="school">Сургууль:</label>
+                <input class="input" id="school" name="school" placeholder="Нэр">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="card-title">Хүйс</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="radio" name="gender" value="male" required> Эрэгтэй</label>
+              <label class="choice"><input type="radio" name="gender" value="female"> Эмэгтэй</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="card-title">Сонирхол</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="interests" value="sport"> Спорт</label>
+              <label class="choice"><input type="checkbox" name="interests" value="music"> Хөгжим</label>
+              <label class="choice"><input type="checkbox" name="interests" value="reading"> Ном унших</label>
+              <label class="choice"><input type="checkbox" name="interests" value="travel"> Хөлбөмбөг</label>
+              <label class="choice"><input type="checkbox" name="interests" value="photography"> Сагс</label>
+              <label class="choice"><input type="checkbox" name="interests" value="coding"> Код бичих</label>
+              <label class="choice"><input type="checkbox" name="interests" value="other"> Бусад</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend class="card-title">Нэмэлт мэдээлэл</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="city">Хот/Аймаг:</label>
+                <select class="input" id="city" name="city" required>
+                <option value="">-- Сонгоно уу --</option>
+                <option>Улаанбаатар</option>
+                <option>Дархан</option>
+                <option>Эрдэнэт</option>
+                <option>Бусад</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="address">Хаяг:</label>
+                <input class="input" id="address" name="address" placeholder="Дүүрэг, хороо, байр">
+              </div>
+              <div class="field field-wide">
+                <label for="bio">Өөрийн тухай:</label>
+                <textarea rows="2" class="input" id="bio" name="bio" placeholder="Товч танилцуулна уу"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+
+        <div class="form-footer">
+          <button class="btn" type="submit">Бүртгүүлэх</button>
+        </div>
+      </form>
+    </main>
+
+    <aside class="sidebar">
+      <section class="widget profile">
+        <div class="avatar">
+          <img id="avatarImg" class="avatar-img" src="image.jpg" alt="Миний зураг" onerror="this.style.visibility='hidden'">
+        </div>
+        <h2>Миний зураг</h2>
+        <label class="photo-btn">Зураг оруулах
+          <input type="file" id="photo" hidden accept="image/*">
+        </label>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Анкет бүртгэл</p>
+    <ul class="footer-links"></ul>
+      <li><a href="#">Холбоо барих</a></li>
+      <li><a href="#">GitHub</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    photo.onchange = e => {
+      avatarImg.src = URL.createObjectURL(e.target.files[0]);
+      avatarImg.style.visibility = 'visible';
+    };
+  </script>
+</body>
+</html>

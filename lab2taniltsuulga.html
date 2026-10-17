@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лаб 2: Хувийн мэдээлэл оруулах анкетын жишээ.">
+  <title>Лаб 2 | Хувийн мэдээллийн анкет</title>
+  <link rel="stylesheet" href="lab2.css">
+</head>
+<body>
+  <header class="page-header">
+    <a class="back-link" href="lab5.html">← Миний танилцуулга</a>
+    <p class="eyebrow">ВЕБ ХӨГЖҮҮЛЭЛТ · ЛАБ 2</p>
+    <h1>Хувийн мэдээллийн анкет</h1>
+    <p class="lead">Мэдээллээ бөглөж, өөрийн сонирхлын талаар хуваалцаарай.</p>
+  </header>
+
+  <main class="page-layout">
+    <aside class="profile-card" aria-label="Танилцуулга">
+      <img src="image.jpg" alt="Профайлын зураг" class="profile-image">
+      <h2>Танилцуулга</h2>
+      <p>Энэ анкет нь HTML формын үндсэн элементүүдийг ашигласан Лаб 2-ын жишээ юм.</p>
+    </aside>
+
+    <form class="profile-form" action="#" method="post">
+      <fieldset class="form-card">
+        <legend>Хувийн мэдээлэл</legend>
+        <div class="fields">
+          <div class="field">
+            <label for="surname">Овог</label>
+            <input id="surname" name="surname" type="text" autocomplete="family-name"
+                   placeholder="Овогоо оруулна уу" minlength="2" required>
+          </div>
+          <div class="field">
+            <label for="name">Нэр</label>
+            <input id="name" name="name" type="text" autocomplete="given-name"
+                   placeholder="Нэрээ оруулна уу" minlength="2" required>
+          </div>
+          <div class="field">
+            <label for="email">Имэйл</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+                   placeholder="example@mail.mn" required>
+          </div>
+          <div class="field">
+            <label for="password">Нууц үг</label>
+            <input id="password" name="password" type="password" autocomplete="new-password"
+                   placeholder="Дор хаяж 8 тэмдэгт" minlength="8"
+                   pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                   title="Дор хаяж 8 тэмдэгт, үсэг болон тоо агуулсан байх ёстой" required>
+            <small>8-аас дээш тэмдэгт, үсэг болон тоо ашиглана уу.</small>
+          </div>
+          <div class="field">
+            <label for="birthdate">Төрсөн огноо</label>
+            <input id="birthdate" name="birthdate" type="date" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend>Хүйс</legend>
+        <div class="choice-list">
+          <label class="choice"><input type="radio" name="gender" value="male" required> Эрэгтэй</label>
+          <label class="choice"><input type="radio" name="gender" value="female"> Эмэгтэй</label>
+          <label class="choice"><input type="radio" name="gender" value="other"> Бусад</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend>Сонирхол</legend>
+        <div class="choice-list">
+          <label class="choice"><input type="checkbox" name="interests" value="sport"> Спорт</label>
+          <label class="choice"><input type="checkbox" name="interests" value="music"> Хөгжим</label>
+          <label class="choice"><input type="checkbox" name="interests" value="reading"> Ном унших</label>
+          <label class="choice"><input type="checkbox" name="interests" value="travel"> Аялал</label>
+          <label class="choice"><input type="checkbox" name="interests" value="other"> Бусад</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend>Нэмэлт мэдээлэл</legend>
+        <div class="field">
+          <label for="city">Хот / аймаг</label>
+          <select id="city" name="city" required>
+            <option value="">-- Сонгоно уу --</option>
+            <option value="ulaanbaatar">Улаанбаатар</option>
+            <option value="darkhan">Дархан</option>
+            <option value="erdenet">Эрдэнэт</option>
+            <option value="other">Бусад</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <button class="submit-button" type="submit">Мэдээлэл илгээх</button>
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <a href="lab5.html">Лаб 5-ын танилцуулга руу буцах</a>
+  </footer>
+</body>
+</html>
